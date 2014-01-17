@@ -1,6 +1,7 @@
 package com.example.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -41,6 +42,7 @@ public class MainActivity extends Activity {
     }
 
     private void onListItemClicked(int position) {
-
+        Intent intent = EulerProblemActivity.createIntent(this, position);
+        startActivity(intent);
     }
 }
